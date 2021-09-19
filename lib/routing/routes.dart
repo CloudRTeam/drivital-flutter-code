@@ -1,16 +1,18 @@
-const rootRoute = "/";
+const rootRoute = '/';
 
-const overviewPageDisplayName = "Overview";
-const overviewPageRoute = "/overview";
+const wrapperRoute = '/wrapper';
 
-const driversPageDisplayName = "Drivers";
-const driversPageRoute = "/drivers";
+const overviewPageDisplayName = 'Overview';
+const overviewPageRoute = '/overview';
 
-const clientsPageDisplayName = "Clients";
-const clientsPageRoute = "/clients";
+const devicesPageDisplayName = 'Devices';
+const devicesPageRoute = '/devices';
 
-const authenticationPageDisplayName = "Log out";
-const authenticationPageRoute = "/auth";
+const clientsPageDisplayName = 'Drivers';
+const clientsPageRoute = '/clients';
+
+const authenticationPageDisplayName = 'Log out';
+const authenticationPageRoute = '/auth';
 
 class MenuItem {
   final String name;
@@ -19,11 +21,9 @@ class MenuItem {
   MenuItem(this.name, this.route);
 }
 
-
-
 List<MenuItem> sideMenuItemRoutes = [
- MenuItem(overviewPageDisplayName, overviewPageRoute),
- MenuItem(driversPageDisplayName, driversPageRoute),
- MenuItem(clientsPageDisplayName, clientsPageRoute),
- MenuItem(authenticationPageDisplayName, authenticationPageRoute),
+  MenuItem(overviewPageDisplayName, overviewPageRoute),
+  MenuItem(devicesPageDisplayName, devicesPageRoute),
+  MenuItem(clientsPageDisplayName, clientsPageRoute),
+  MenuItem(authenticationPageDisplayName, authenticationPageRoute),
 ];

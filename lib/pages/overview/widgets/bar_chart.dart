@@ -18,7 +18,6 @@ class SimpleBarChart extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return new charts.BarChart(
@@ -37,7 +36,6 @@ class SimpleBarChart extends StatelessWidget {
       new OrdinalSales('23 Jun', 15),
       new OrdinalSales('22 Jun', 85),
       new OrdinalSales('21 Jun', 45),
-
     ];
 
     return [

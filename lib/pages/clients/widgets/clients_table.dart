@@ -8,6 +8,11 @@ import 'package:flutter_web_dashboard/widgets/custom_text.dart';
 class Clientstable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // event_lsit = []
+    // for device in devices:
+    //  for event in device.event_list:
+    //    event_list.append(event);
+
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -22,60 +27,60 @@ class Clientstable extends StatelessWidget {
       ),
       padding: const EdgeInsets.all(16),
       margin: EdgeInsets.only(bottom: 30),
-      child:   DataTable2(
-              columnSpacing: 12,
-              horizontalMargin: 12,
-              minWidth: 600,
-              columns: [
-                DataColumn2(
-                  label: Text("Name"),
-                  size: ColumnSize.L,
-                ),
-                DataColumn(
-                  label: Text('Location'),
-                ),
-                DataColumn(
-                  label: Text('Rating'),
-                ),
-                DataColumn(
-                  label: Text('Action'),
-                ),
-              ],
-              rows: List<DataRow>.generate(
-                  15,
-                  (index) => DataRow(cells: [
-                        DataCell(CustomText(text: "Santos Enoque")),
-                        DataCell(CustomText(text: "New yourk city")),
-                        DataCell(Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.star,
-                              color: Colors.deepOrange,
-                              size: 18,
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            CustomText(
-                              text: "4.5",
-                            )
-                          ],
-                        )),
-                        DataCell(Container(
-                            decoration: BoxDecoration(
-                              color: light,
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: active, width: .5),
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 12, vertical: 6),
-                            child: CustomText(
-                              text: "Block",
-                              color: active.withOpacity(.7),
-                              weight: FontWeight.bold,
-                            ))),
-                      ]))),
+      child: DataTable2(
+          columnSpacing: 12,
+          horizontalMargin: 12,
+          minWidth: 600,
+          columns: [
+            DataColumn2(
+              label: Text("Name"),
+              size: ColumnSize.L,
+            ),
+            DataColumn(
+              label: Text('Location'),
+            ),
+            DataColumn(
+              label: Text('Rating'),
+            ),
+            DataColumn(
+              label: Text('Action'),
+            ),
+          ],
+          rows: List<DataRow>.generate(
+              15,
+              (index) => DataRow(cells: [
+                    DataCell(CustomText(text: "Santos Enoque")),
+                    DataCell(CustomText(text: 'New York')),
+                    DataCell(Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.deepOrange,
+                          size: 18,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        CustomText(
+                          text: "4.5",
+                        )
+                      ],
+                    )),
+                    DataCell(Container(
+                        decoration: BoxDecoration(
+                          color: light,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: active, width: .5),
+                        ),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        child: CustomText(
+                          text: "Block",
+                          color: active.withOpacity(.7),
+                          weight: FontWeight.bold,
+                        ))),
+                  ]))),
     );
   }
 }
